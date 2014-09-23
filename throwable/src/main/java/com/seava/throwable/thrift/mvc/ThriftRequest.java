@@ -1,4 +1,4 @@
-package com.seava.throwable.server.thrift.mvc;
+package com.seava.throwable.thrift.mvc;
 
 import java.util.Map;
 import java.util.Map.Entry;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="1 minutes" debug="false">
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder charset="UTF-8">
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>../logs/service.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>5</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="stdout" />
+		<!-- <appender-ref ref="FILE" /> -->
+	</root>
+
+	<logger name="xiuba.server">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="ch.qos.logback">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.apache.thrift.server">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.nutz.dao">
+		<level value="DEBUG" />
+	</logger>
+</configuration>
