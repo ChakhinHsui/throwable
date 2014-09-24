@@ -46,7 +46,7 @@ public class AbstractThriftController {
 			
 			return ret;
 		}catch(Exception e){
-			e.printStackTrace();
+			
 		}finally{
 			try {
 				pool.returnObject(conn);

@@ -4,6 +4,9 @@
  */
 package com.seava.throwable.server.user;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.nutz.mvc.annotation.At;
 import org.nutz.mvc.annotation.Param;
 
@@ -15,7 +18,11 @@ import org.nutz.mvc.annotation.Param;
 public class UserController {
 
 	@At("/login")
-	public void login(@Param("username") String username, @Param("password") String password){
+	public Map<String, String> login(@Param("username") String username, @Param("password") String password){
 		System.out.println("username: " + username + "   password: " + password);
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("username", username);
+		map.put("password", password);
+		return map;
 	}
 }

@@ -94,7 +94,7 @@ public class RPCDispatcher {
 			return backMsg;
 		}
 		// 如果没有运行过的标志，则表示该请求未定义
-		if(null == request.getAttribute("funFlag")){
+		if(null == request.getAttribute("runFlag")){
 			backMsg.backCode = BackCode.NOT_DEFINED;
 			backMsg.msg = "该请求未定义";
 			return backMsg;
