@@ -35,6 +35,13 @@
          <systemPath>${project.basedir}/src/main/lib/nutz-mock-1.b.50-jdk6.jar</systemPath>  
     </dependency>
     <dependency>
+			<groupId>com.logback</groupId>
+			<artifactId>logback</artifactId>
+			<version>1.0.7</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/lib/log4j-over-logback-all-1.0.7.jar</systemPath>
+		</dependency>
+    <dependency>
 		<groupId>com.alibaba</groupId>
 		<artifactId>fastjson</artifactId>
 		<version>1.1.37</version>
@@ -86,11 +93,12 @@
 		<artifactId>mongo-java-driver</artifactId>
 		<version>2.11.1</version>
 	</dependency>
-	<dependency>
+	<!--  <dependency>
 		 <groupId>org.slf4j</groupId>
   		 <artifactId>slf4j-log4j12</artifactId>
  		 <version>1.6.1</version>
 	</dependency>
+	-->
 	<dependency>
 	    <groupId>org.quartz-scheduler</groupId>
 	    <artifactId>quartz</artifactId>

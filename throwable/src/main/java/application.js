@@ -61,12 +61,5 @@ var ioc = {
 		}, {
 			refer : "sqlManager"
 		} ]
-	},
-	// 缓存拦截器
-	$aop : {
-		type : 'org.nutz.ioc.aop.config.impl.JsonAopConfigration',
-		fields : {
-			itemList : [ [ 'com.seava.throwable.+', '.+', 'ioc:cacheInterceptor' ] ]
-		}
 	}
 }

@@ -11,6 +11,7 @@ package com.seava.throwable;
 import java.util.Map;
 
 import org.apache.commons.pool.impl.GenericObjectPool;
+import org.junit.Before;
 
 import com.seava.throwable.thrift.client.ThriftClientFactory;
 import com.seava.throwable.thrift.client.ThriftConnect;
@@ -27,6 +28,7 @@ public class AbstractThriftController {
 	
 	private static GenericObjectPool<ThriftConnect> pool;
 	
+	@Before
 	public void setUp() throws Exception{
 		ThriftClientFactory factory = new ThriftClientFactory(host, port, 10 * 1000);
 		pool = new  GenericObjectPool<ThriftConnect>(factory);
